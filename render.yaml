@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: translation-audit-collector
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NOTION_VERSION
+        value: "2025-09-03"
+      - key: NOTION_TOKEN
+        sync: false
+      - key: GOOGLE_SERVICE_ACCOUNT_JSON_B64
+        sync: false
+      - key: MCP_BEARER_TOKEN
+        sync: false
+      - key: ATTESTATION_SIGNING_SECRET
+        sync: false
+      - key: AUDIT_SCOPE_JSON
+        sync: false
