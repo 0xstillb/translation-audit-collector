@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "translation-audit",
+  "version": "0.1.0",
+  "description": "Read-only Source/Target evidence verification from trusted Notion and Drive collection; never fabricates machine PASS.",
+  "author": { "name": "Translation Skills" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Translation Audit",
+        "shortDescription": "Verify translation evidence",
+        "longDescription": "Verify canonical translation evidence from Notion and Google Drive with authenticated, read-only origin collection. Literary review remains with the translator.",
+        "developerName": "Translation Skills",
+        "category": "Productivity",
+        "capabilities": ["Interactive"],
+        "defaultPrompt": "ตรวจ Machine Verification ของนักท่องแดนวิญญาณ ตอนที่ 1 โดยเรียก Translation Audit และรายงานผลตามจริง"
+      }
+    }
+  }
+}
