@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "translation-audit": {
+      "type": "streamable-http",
+      "url": "https://REPLACE-WITH-VERIFIED-RENDER-HOST.onrender.com/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "api_key",
+            "headerScheme": "bearer"
+          }
+        }
+      }
+    }
+  }
+}
